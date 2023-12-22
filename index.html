@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="border_container">
+    <main id="main_container">
+        <h1 id="main-header">Etch a Sketch</h1>
+        <div id="panel_container">
+            <div id="panel">
+                <div id="brush-outer-container">
+                    <div id="brush-btn-container">
+                        <button id="brush-btn" class="dropdown-btn"></button>
+                    </div>
+                    <div id="brush-container">
+                        <ol id="brush-dropdown-options-container" class="dropdown-options-container">
+                            <li id="brush-tiny" class="brush-dropdown-option dropdown-option">Tiny</li>
+                            <li id="brush-medium" class="brush-dropdown-option dropdown-option">Medium</li>
+                            <li id="brush-large" class="brush-dropdown-option dropdown-option">Large</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="fav_color_container">
+                    <input class="fav_color" type="color" value="#000000"/>
+                    <input class="fav_color" type="color" value="#ffffff"/>
+                    <input class="fav_color" type="color" value="#ff0000"/>
+                    <input class="fav_color" type="color" value="#00ff00">
+                    <input class="fav_color" type="color" value="#0000ff"/>
+                </div>
+                <div id="rubber-btn-container"></div>
+                <div id="grid-size-btn-container">
+                    <div id="gs-icon"></div>
+                    <div id="gs-container">
+                        <ol id="gs-dropdown-options-container" class="dropdown-options-container">
+                            <li class="gs-dropdown-option dropdown-option">Basic</li>
+                            <li class="gs-dropdown-option dropdown-option">Medium</li>
+                            <li class="gs-dropdown-option dropdown-option">Large</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="undo-redo-container">
+                    <div id="redo-icon"></div>
+                    <div id="undo-icon"></div>
+                </div>
+                <div id="extra-options-outer-container">
+                    <div id="options-icon"></div>
+                    <div id="options-container">
+                        <ol id="options-dropdown-options-container" class="dropdown-options-container">
+                            <li id="replay" class="options-dropdown-option dropdown-option">Replay</li>
+                            <li id="save" class="options-dropdown-option dropdown-option">Save</li>
+                            <li id="erase" class="options-dropdown-option dropdown-option">Erase</li>
+                            <li id="credits" class="options-dropdown-option dropdown-option">Credits</li>
+                        </ol>
+                    </div>
+                    <div id="credits-container">
+                        <ol id="credits-dropdown-options-container" class="dropdown-options-container">
+                            <li id="credits-arrow-right" class="options-dropdown-option dropdown-option">
+                                Arrow Right Square by Catalin Fertu, used under CC license.
+                            </li>
+                            <li id="credits-arrow-left" class="options-dropdown-option dropdown-option">
+                                Arrow Left Square by Catalin Fertu, used under CC license.
+                            </li>
+                            <li id="credits-settings" class="options-dropdown-option dropdown-option">
+                                Settings by Nuiverse Design, used under BSD license.
+                            </li>
+                            <li id="credits-hash-straight" class="options-dropdown-option dropdown-option">
+                                Hash straight by Phosphor, used under MIT license.
+                            </li>
+                            <li id="credits-paint-brush" class="options-dropdown-option dropdown-option">
+                                Paint Brush by Phosphor, used under MIT license.
+                            </li>
+                            <li id="credits-rubber" class="options-dropdown-option dropdown-option">
+                                Rubber by michaelampr, used under MIT license.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="board_container">
+            <div id="board"></div>
+        </div>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
