@@ -10,7 +10,7 @@
 
     let BRUSH_SIZE = 1;
     let BRUSH_COLOR = "#000000";
-    let BRUSH_ENABLED_COUNTER = 0;
+    let BRUSH_ENABLED = false;
     let EPOCH = 0;
 
     let BRUSH_OPTIONS_WINDOW_OPEN = false;
@@ -246,7 +246,8 @@
     });
 
     window.addEventListener("mousedown", (e) => {
-        BRUSH_ENABLED_COUNTER++;
+        BRUSH_ENABLED = true;
+
         if (e.target.hasAttribute("coordinates") && !BOARD_RECORDER_REPLAY_ENABLED) {
             EPOCH++;
             paint(e.target);
@@ -254,7 +255,7 @@
     });
 
     window.addEventListener("mouseup", () => {
-        BRUSH_ENABLED_COUNTER--;
+        BRUSH_ENABLED = false;
     });
 
     document.getElementById("undo-icon").addEventListener("click", (e) => {
@@ -368,6 +369,10 @@
         }
     });
 
+    document.getElementById("board").addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    });
+
     function plotBoard(dim) {
         const fragment = document.createDocumentFragment();
         const board2D = [];
@@ -443,7 +448,7 @@
     }
 
     function paint(target) {
-        if (BRUSH_ENABLED_COUNTER === 0) {
+        if (!BRUSH_ENABLED) {
             return;
         }
 
