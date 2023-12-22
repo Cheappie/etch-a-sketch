@@ -1,4 +1,4 @@
-Discover MiniSketch: a sleek, engaging digital etch-a-sketch that's both simple and fun.
+A sleek, engaging digital etch-a-sketch that's both simple and fun.
 
 **Features**
 
